@@ -654,7 +654,7 @@ columnia.register_column_ia("junglewood", "default:junglewood",
 		"Junglewood Column Linkdown",
 		default.node_sound_wood_defaults())
 
-columnia.register_column_ia("wood", "default:pine_wood",
+columnia.register_column_ia("pinewood", "default:pine_wood",
         {snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
         {"default_pine_wood.png"},
         "Pinewood Column",
