@@ -632,7 +632,7 @@ columnia.register_column_ia("sandstonebrick", "default:sandstonebrick",
 		default.node_sound_stone_defaults()
         )
 		
-columnia.register_column_ia("wood", "group:wood",
+columnia.register_column_ia("wood", "default:wood",
 		{snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 		{"default_wood.png"},
 		"Wooden Column",
@@ -654,6 +654,17 @@ columnia.register_column_ia("junglewood", "default:junglewood",
 		"Junglewood Column Linkdown",
 		default.node_sound_wood_defaults())
 
+columnia.register_column_ia("wood", "default:pine_wood",
+        {snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
+        {"default_pine_wood.png"},
+        "Pinewood Column",
+        "Pineewood Column Top",
+        "Pineewood Column Bottom",
+        "Pineewood Column Crosslink",
+        "Pineewood Column Link",
+        "Pineewood Column Linkdown",
+        default.node_sound_wood_defaults())
+
 if core.get_modpath( 'moretrees' ) then
 	local morewood = {
 		{ name='beech', description='Beech Tree' },
@@ -663,7 +674,6 @@ if core.get_modpath( 'moretrees' ) then
 		{ name='birch', description='Birch Tree' },
 		{ name='palm', description='Palm Tree', },
 		{ name='spruce', description='Spruce Tree' },
-		{ name='pine', description='Pine Tree' },
 		{ name='willow', description='Willow Tree' },
 		{ name='acacia', description='Acacia Tree' },
 		{ name='rubber_tree',	description='Rubber Tree' },
