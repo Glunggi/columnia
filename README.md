@@ -3,14 +3,6 @@ columnia
 
 Simple Pillar Mod for Minetest
 
-Advice:
-Dont Download the mod from GitHub:
-I had some problems whit GitHub so i can't upload the texturefolder. So please download the mod from this Link:
-https://www.dropbox.com/s/cbpdgbkbzrp1yir/columnia.zip
-This zip will also include the textures.
-The GitHub respository is only for the Code.
-I'm sorry
-
 Licences:
 Columnia (2014 by Glunggi) is a fork of stairs ..in principle is its stairs with other nodes.
 So i will to keep the old stairs- Licenses for this chanced Mode.. include all of my chances.

@@ -533,7 +533,8 @@ columnia.register_column_ia("rusty_block", "columnia:rusty_block",
 		"Rusty Column Crosslink",
 		"Rusty Column Link",
 		"Rusty Column Linkdown",
-		default.node_sound_stone_defaults())
+		default.node_sound_stone_defaults()
+        )
 
 columnia.register_column_ia("stone", "default:stone",
 		{cracky=3},
@@ -544,7 +545,8 @@ columnia.register_column_ia("stone", "default:stone",
 		"Stone Column Crosslink",
 		"Stone Column Link",
 		"Stone Column Linkdown",
-		default.node_sound_stone_defaults())
+		default.node_sound_stone_defaults()
+        )
 		
 columnia.register_column_ia("stonebrick", "default:stonebrick",
 		{cracky=3},
@@ -555,7 +557,8 @@ columnia.register_column_ia("stonebrick", "default:stonebrick",
 		"Stone Brick Column Crosslink",
 		"Stone Brick Column Link",
 		"Stone Brick Column Linkdown",
-		default.node_sound_stone_defaults())
+		default.node_sound_stone_defaults()
+        )
 
 columnia.register_column_ia("desert_stonebrick", "default:desert_stonebrick",
 		{cracky=3},
@@ -566,7 +569,8 @@ columnia.register_column_ia("desert_stonebrick", "default:desert_stonebrick",
 		"Desert Stone Brick Column Crosslink",
 		"Desert Stone Brick Column Link",
 		"Desert Stone Brick Column Linkdown",
-		default.node_sound_stone_defaults())	
+		default.node_sound_stone_defaults()
+        )	
 
 columnia.register_column_ia("desert_stone", "default:desert_stone",
 		{cracky=3},
@@ -577,7 +581,8 @@ columnia.register_column_ia("desert_stone", "default:desert_stone",
 		"Desert Stone Column Crosslink",
 		"Desert Stone Column Link",
 		"Desert Stone Column Linkdown",
-		default.node_sound_stone_defaults())		
+		default.node_sound_stone_defaults()
+        )		
 		
 columnia.register_column_ia("cobble", "default:cobble",
 		{cracky=3},
@@ -588,7 +593,8 @@ columnia.register_column_ia("cobble", "default:cobble",
 		"Cobble Column Crosslink",
 		"Cobble Column Link",
 		"Cobble Column Linkdown",
-		default.node_sound_stone_defaults())
+		default.node_sound_stone_defaults()
+        )
 
 columnia.register_column_ia("brick", "default:brick",
 		{cracky=3},
@@ -599,7 +605,8 @@ columnia.register_column_ia("brick", "default:brick",
 		"Brick Column Crosslink",
 		"Brick Column Link",
 		"Brick Column Linkdown",
-		default.node_sound_stone_defaults())	
+		default.node_sound_stone_defaults()
+        )	
 			
 columnia.register_column_ia("sandstone", "default:sandstone",
 		{crumbly=2,cracky=2},
@@ -610,7 +617,8 @@ columnia.register_column_ia("sandstone", "default:sandstone",
 		"Sandstone Column Crosslink",
 		"Sandstone Column Link",
 		"Sandstone Column Linkdown",
-		default.node_sound_stone_defaults())
+		default.node_sound_stone_defaults()
+        )
 		
 columnia.register_column_ia("sandstonebrick", "default:sandstonebrick",
 		{crumbly=2,cracky=2},
@@ -621,7 +629,8 @@ columnia.register_column_ia("sandstonebrick", "default:sandstonebrick",
 		"Sandstone Brick Column Crosslink",
 		"Sandstone Brick Column Link",
 		"Sandstone Brick Column Linkdown",
-		default.node_sound_stone_defaults())
+		default.node_sound_stone_defaults()
+        )
 		
 columnia.register_column_ia("wood", "default:wood",
 		{snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
@@ -644,3 +653,59 @@ columnia.register_column_ia("junglewood", "default:junglewood",
 		"Junglewood Column Link",
 		"Junglewood Column Linkdown",
 		default.node_sound_wood_defaults())
+
+columnia.register_column_ia("pinewood", "default:pine_wood",
+        {snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
+        {"default_pine_wood.png"},
+        "Pinewood Column",
+        "Pineewood Column Top",
+        "Pineewood Column Bottom",
+        "Pineewood Column Crosslink",
+        "Pineewood Column Link",
+        "Pineewood Column Linkdown",
+        default.node_sound_wood_defaults())
+
+if core.get_modpath( 'moretrees' ) then
+	local morewood = {
+		{ name='beech', description='Beech Tree' },
+		{ name='apple_tree',	description='Apple Tree' },
+		{ name='oak', description='Oak Tree' },
+		{ name='sequoia', description='Giant Sequoia' },
+		{ name='birch', description='Birch Tree' },
+		{ name='palm', description='Palm Tree', },
+		{ name='spruce', description='Spruce Tree' },
+		{ name='willow', description='Willow Tree' },
+		{ name='acacia', description='Acacia Tree' },
+		{ name='rubber_tree',	description='Rubber Tree' },
+		{ name='fir', description='Douglas Fir' }
+	}
+	for _,t in pairs( morewood ) do
+		print('register: '.. t.name)
+		columnia.register_column_ia( t.name, 'moretrees:' .. t.name ..'_planks',
+			{snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
+			{ 'moretrees_' .. t.name .. '_wood.png' },
+			t.description .. ' Column',
+			t.description .. ' Column Top',
+			t.description .. ' Column Bottom',
+			t.description .. ' Column Crosslink',
+			t.description .. ' Column Link',
+			t.description .. ' Column Linkdown',
+			default.node_sound_wood_defaults())
+	end
+end
+
+if core.get_modpath('moreblocks') then
+	stairsplus:register_all(
+                'columnia',
+                'rusty_block',
+                'columnia:rusty_block',
+                {
+                        description = 'Rusty Block',
+                        tiles = {
+				'columnia_rusty_block.png'
+			},
+                        groups = {cracky=3},
+                        sounds = default.node_sound_stone_defaults(),
+                }
+        )
+end
