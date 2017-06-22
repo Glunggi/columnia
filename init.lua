@@ -658,11 +658,11 @@ columnia.register_column_ia("pinewood", "default:pine_wood",
         {snappy=2,choppy=2,oddly_breakable_by_hand=2,flammable=3},
         {"default_pine_wood.png"},
         "Pinewood Column",
-        "Pineewood Column Top",
-        "Pineewood Column Bottom",
-        "Pineewood Column Crosslink",
-        "Pineewood Column Link",
-        "Pineewood Column Linkdown",
+        "Pinewood Column Top",
+        "Pinewood Column Bottom",
+        "Pinewood Column Crosslink",
+        "Pinewood Column Link",
+        "Pinewood Column Linkdown",
         default.node_sound_wood_defaults())
 
 if core.get_modpath( 'moretrees' ) then
